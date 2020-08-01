@@ -33,10 +33,37 @@ gsap.to('.heading', {
   y: getOffset(0.6),
 });
 
+gsap.to('.about-text', {
+  scrollTrigger: {
+    trigger: '.about-text',
+    scrub: 0.2,
+  },
+  ease: 'none',
+  y: getOffset(-0.1),
+});
+
 gsap.to('.about-heading', {
   scrollTrigger: {
     trigger: '.about-heading',
-    start: 'top 60%',
+    start: 'top 75%',
+    toggleActions: 'restart none none reverse',
+  },
+  opacity: 1,
+});
+
+gsap.to('.about-image', {
+  scrollTrigger: {
+    trigger: '.about-image',
+    start: 'top 75%',
+    toggleActions: 'restart none none reverse',
+  },
+  opacity: 1,
+});
+
+gsap.to('.about-text', {
+  scrollTrigger: {
+    trigger: '.about-text',
+    start: 'top 75%',
     toggleActions: 'restart none none reverse',
   },
   opacity: 1,

@@ -67,3 +67,5 @@ node_modules/
 # parcel
 dist/
 .cache/
+
+.DS_Store

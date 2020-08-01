@@ -3,3 +3,35 @@ body {
   margin: 0;
   font-family: 'Roboto Mono', monospace;
 }
+
+section.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div.content {
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  h2 {
+    font-size: 32px;
+    margin: 0;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  @media screen and (min-width: 400px) {
+    h2 {
+      font-size: 8vw;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    h2 {
+      font-size: 80px;
+    }
+  }
+}
