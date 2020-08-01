@@ -37,7 +37,7 @@ section.about {
     div.about-text {
       grid-area: text;
       opacity: 0;
-      margin-top: 24px;
+      margin-top: 56px;
     }
   }
 
@@ -70,7 +70,14 @@ section.about {
 
       h2.about-heading {
         width: fit-content;
-        transform: translateX(0) translateY(-60px);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0) 35%,
+          #1c1c1c 35%,
+          #1c1c1c 100%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        transform: translateX(0) translateY(8px);
         padding: 1vw 2vw 0 4vw;
       }
 
