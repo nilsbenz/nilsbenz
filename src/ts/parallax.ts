@@ -33,6 +33,15 @@ gsap.to('.heading', {
   y: getOffset(0.6),
 });
 
+gsap.to('.scroll-down-icon', {
+  scrollTrigger: {
+    trigger: '.about-image',
+    start: 'top 75%',
+    toggleActions: 'restart none none reverse',
+  },
+  opacity: 0,
+});
+
 gsap.to('.about-text', {
   scrollTrigger: {
     trigger: '.about-text',
@@ -147,5 +156,15 @@ gsap.to('.software-interested-text', {
     start: 'top 75%',
     toggleActions: 'restart none none reverse',
   },
+  opacity: 1,
+});
+
+gsap.to('.contact-image', {
+  scrollTrigger: {
+    trigger: '.contact-image',
+    start: 'top 75%',
+    toggleActions: 'restart none none reverse',
+  },
+  scale: 1,
   opacity: 1,
 });

@@ -92,6 +92,26 @@ section.landing {
     .foreground-bottom {
       background-color: #1c1c1c;
       height: calc(10vh + 1px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @keyframes scroll-down-animation {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(8px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      img.scroll-down-icon {
+        width: 40px;
+        animation: scroll-down-animation 3s ease-in-out infinite;
+      }
     }
   }
 

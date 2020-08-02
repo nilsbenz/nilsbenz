@@ -28,13 +28,28 @@ section.container {
     line-height: 1.5;
   }
 
+  a,
+  a:link {
+    color: inherit;
+    text-decoration: none;
+    background-position-y: -0%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 45%, #fe676a 45%);
+    transition: background 500ms ease;
+    background-size: 2px;
+    background-size: auto 155%;
+  }
+
+  a:hover {
+    background-position-y: 100%;
+  }
+
   @media screen and (min-width: 500px) {
     h2 {
       font-size: 8vw;
     }
 
     h3 {
-      font-size: 4.8;
+      font-size: 4.8vw;
     }
   }
 
