@@ -60,18 +60,9 @@ gsap.to('.about-image', {
   opacity: 1,
 });
 
-gsap.to('.about-text', {
-  scrollTrigger: {
-    trigger: '.about-text',
-    start: 'top 75%',
-    toggleActions: 'restart none none reverse',
-  },
-  opacity: 1,
-});
-
 gsap.to('.videos-main-player', {
   scrollTrigger: {
-    trigger: '.videos-player',
+    trigger: '.videos-main-player',
     scrub: 0.2,
   },
   ease: 'none',
@@ -81,15 +72,6 @@ gsap.to('.videos-main-player', {
 gsap.to('.videos-heading', {
   scrollTrigger: {
     trigger: '.videos-heading',
-    start: 'top 75%',
-    toggleActions: 'restart none none reverse',
-  },
-  opacity: 1,
-});
-
-gsap.to('.videos-image', {
-  scrollTrigger: {
-    trigger: '.videos-image',
     start: 'top 75%',
     toggleActions: 'restart none none reverse',
   },
@@ -114,9 +96,54 @@ gsap.to('.videos-main-player', {
   opacity: 1,
 });
 
-gsap.to('.videos-carousel', {
+gsap.to('.software-image', {
   scrollTrigger: {
-    trigger: '.videos-carousel',
+    trigger: '.software-image',
+    scrub: 0.2,
+  },
+  ease: 'none',
+  x: getOffset(0.1),
+});
+
+gsap.to('.software-qualifications', {
+  scrollTrigger: {
+    trigger: '.software-qualifications',
+    start: 'top 75%',
+    toggleActions: 'restart none none reverse',
+  },
+  opacity: 1,
+});
+
+gsap.to('.software-references-heading', {
+  scrollTrigger: {
+    trigger: '.software-references-heading',
+    start: 'top 80%',
+    toggleActions: 'restart none none reverse',
+  },
+  opacity: 1,
+});
+
+gsap.to('.software-references-text', {
+  scrollTrigger: {
+    trigger: '.software-references-text',
+    start: 'top 75%',
+    toggleActions: 'restart none none reverse',
+  },
+  opacity: 1,
+});
+
+gsap.to('.software-interested-heading', {
+  scrollTrigger: {
+    trigger: '.software-interested-heading',
+    start: 'top 80%',
+    toggleActions: 'restart none none reverse',
+  },
+  opacity: 1,
+});
+
+gsap.to('.software-interested-text', {
+  scrollTrigger: {
+    trigger: '.software-interested-text',
     start: 'top 75%',
     toggleActions: 'restart none none reverse',
   },
