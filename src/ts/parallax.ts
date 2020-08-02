@@ -68,3 +68,57 @@ gsap.to('.about-text', {
   },
   opacity: 1,
 });
+
+gsap.to('.videos-main-player', {
+  scrollTrigger: {
+    trigger: '.videos-player',
+    scrub: 0.2,
+  },
+  ease: 'none',
+  y: getOffset(0.1),
+});
+
+gsap.to('.videos-heading', {
+  scrollTrigger: {
+    trigger: '.videos-heading',
+    start: 'top 75%',
+    toggleActions: 'restart none none reverse',
+  },
+  opacity: 1,
+});
+
+gsap.to('.videos-image', {
+  scrollTrigger: {
+    trigger: '.videos-image',
+    start: 'top 75%',
+    toggleActions: 'restart none none reverse',
+  },
+  opacity: 1,
+});
+
+gsap.to('.videos-text', {
+  scrollTrigger: {
+    trigger: '.videos-text',
+    start: 'top 75%',
+    toggleActions: 'restart none none reverse',
+  },
+  opacity: 1,
+});
+
+gsap.to('.videos-main-player', {
+  scrollTrigger: {
+    trigger: '.videos-main-player',
+    start: 'top 75%',
+    toggleActions: 'restart none none reverse',
+  },
+  opacity: 1,
+});
+
+gsap.to('.videos-carousel', {
+  scrollTrigger: {
+    trigger: '.videos-carousel',
+    start: 'top 75%',
+    toggleActions: 'restart none none reverse',
+  },
+  opacity: 1,
+});

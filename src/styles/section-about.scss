@@ -3,8 +3,8 @@ section.about {
   background-color: #1c1c1c;
   z-index: 1;
   transform: translateZ(1px);
-  color: white;
-  padding: 48px 16px;
+  color: #fff;
+  padding: 64px 16px;
 
   div.grid {
     display: grid;
@@ -37,7 +37,7 @@ section.about {
     div.about-text {
       grid-area: text;
       opacity: 0;
-      margin-top: 56px;
+      margin: 112px 0 -112px;
     }
   }
 
@@ -53,10 +53,6 @@ section.about {
         transform: translateX(-5vw);
         justify-self: end;
         align-self: end;
-      }
-
-      div.about-text {
-        width: 60%;
       }
     }
   }
@@ -79,10 +75,6 @@ section.about {
         );
         transform: translateX(0) translateY(8px);
         padding: 1vw 2vw 0 4vw;
-      }
-
-      div.about-text {
-        width: 100%;
       }
     }
   }
