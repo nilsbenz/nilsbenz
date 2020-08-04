@@ -43,7 +43,7 @@ section.videos {
     div.videos-main-player {
       grid-area: mainplayer;
       width: calc(100% + 144px);
-      margin: -80px 0 80px;
+      margin: -70px 0 70px;
       opacity: 0;
     }
 
@@ -126,7 +126,7 @@ section.videos {
 
       div.videos-main-player {
         width: 100%;
-        margin: -120px 0 120px;
+        margin: -85px 0 85px;
       }
     }
   }
