@@ -12,7 +12,7 @@ gsap.to('.background', {
     scrub: 0.2,
   },
   ease: 'none',
-  y: getOffset(0.5),
+  y: getOffset(0.15),
 });
 
 gsap.to('.midground', {
@@ -21,7 +21,7 @@ gsap.to('.midground', {
     scrub: 0.2,
   },
   ease: 'none',
-  y: getOffset(0.3),
+  y: getOffset(0.1),
 });
 
 gsap.to('.heading', {
@@ -30,7 +30,7 @@ gsap.to('.heading', {
     scrub: 0.2,
   },
   ease: 'none',
-  y: getOffset(0.6),
+  y: getOffset(0.25),
 });
 
 gsap.to('.scroll-down-icon', {
@@ -48,7 +48,7 @@ gsap.to('.about-text', {
     scrub: 0.2,
   },
   ease: 'none',
-  y: getOffset(-0.1),
+  y: getOffset(-0.05),
 });
 
 gsap.to('.about-heading', {
@@ -75,7 +75,7 @@ gsap.to('.videos-main-player', {
     scrub: 0.2,
   },
   ease: 'none',
-  y: getOffset(0.1),
+  y: getOffset(0.05),
 });
 
 gsap.to('.videos-heading', {

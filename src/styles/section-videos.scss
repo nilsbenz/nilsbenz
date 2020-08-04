@@ -43,7 +43,7 @@ section.videos {
     div.videos-main-player {
       grid-area: mainplayer;
       width: calc(100% + 144px);
-      margin-top: -188px;
+      margin: -80px 0 80px;
       opacity: 0;
     }
 
@@ -51,7 +51,7 @@ section.videos {
       grid-area: carousel;
       overflow-x: hidden;
       width: 100%;
-      margin-top: 240px;
+      margin-top: 160px;
 
       .videos-carousel-cell {
         width: 80%;
@@ -92,10 +92,10 @@ section.videos {
 
       div.videos-main-player {
         width: 100%;
-        margin-top: -160px;
+        margin: -80px 0 80px;
       }
       .videos-carousel {
-        margin-top: 320px;
+        margin-top: 160px;
       }
     }
   }
@@ -126,10 +126,7 @@ section.videos {
 
       div.videos-main-player {
         width: 100%;
-        margin-top: -200px;
-      }
-      .videos-carousel {
-        margin-top: 320px;
+        margin: -120px 0 120px;
       }
     }
   }
