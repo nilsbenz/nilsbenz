@@ -1,9 +1,11 @@
+@import './common.scss';
+
 section.contact {
   min-height: 80vh;
-  background-color: #fff;
+  background-color: $bg-light;
   z-index: 1;
   transform: translateZ(1px);
-  color: #000;
+  color: $bg-light-contrast;
   padding: 64px 16px;
 
   div.grid {
@@ -54,8 +56,8 @@ section.contact {
         background: linear-gradient(
           180deg,
           rgba(255, 255, 255, 0) 18%,
-          #fff 18%,
-          #fff 100%,
+          $bg-light 18%,
+          $bg-light 100%,
           rgba(255, 255, 255, 0) 100%
         );
         transform: translateX(0) translateY(-5.5vw);

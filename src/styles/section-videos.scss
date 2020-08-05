@@ -1,11 +1,12 @@
 @import 'flickity/dist/flickity.min.css';
+@import './common.scss';
 
 section.videos {
   min-height: 100vh;
-  background-color: #fff;
+  background-color: $bg-light;
   z-index: 1;
   transform: translateZ(1px);
-  color: #000;
+  color: $bg-light-contrast;
   padding: 64px 16px;
 
   div.grid {
@@ -26,7 +27,7 @@ section.videos {
       padding: 1vw 8vw 0 0;
       background: linear-gradient(
         180deg,
-        #ffffff 72%,
+        $bg-light 72%,
         rgba(255, 255, 255, 0) 72%
       );
       width: calc(100%);
@@ -55,20 +56,20 @@ section.videos {
 
       .videos-carousel-cell {
         width: 80%;
-        background: #ddd;
+        background: $grey;
         margin: 0 1vw;
       }
     }
   }
 
   .video {
-    background-color: #484848;
+    background-color: $grey;
     position: relative;
     height: 0;
     padding-bottom: 56.25%;
 
     iframe {
-      background-color: #484848;
+      background-color: $grey;
       position: absolute;
       top: 0;
       left: 0;
@@ -112,8 +113,8 @@ section.videos {
         background: linear-gradient(
           180deg,
           rgba(255, 255, 255, 0) 5%,
-          #fff 5%,
-          #fff 100%,
+          $bg-light 5%,
+          $bg-light 100%,
           rgba(255, 255, 255, 0) 100%
         );
         transform: translateX(0) translateY(8px);

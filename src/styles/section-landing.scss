@@ -1,4 +1,8 @@
+@import './common.scss';
+
 section.landing {
+  background-color: $bg-light;
+
   .background,
   .midground,
   .foreground {
@@ -22,7 +26,7 @@ section.landing {
     }
 
     .background-bottom {
-      background-color: #f4f4f4;
+      background-color: $primary-light;
       min-height: 100px;
       height: calc(60vh + 1px);
     }
@@ -40,7 +44,7 @@ section.landing {
     }
 
     .midground-bottom {
-      background-color: #bfbfbf;
+      background-color: $primary-dark;
       min-height: 100px;
       height: calc(40vh + 1px);
     }
@@ -90,7 +94,7 @@ section.landing {
     }
 
     .foreground-bottom {
-      background-color: #1c1c1c;
+      background-color: $bg-dark;
       height: calc(20vh + 1px);
       display: flex;
       justify-content: center;

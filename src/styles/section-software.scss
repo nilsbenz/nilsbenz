@@ -1,9 +1,11 @@
+@import './common.scss';
+
 section.software {
   min-height: 100vh;
-  background-color: #1c1c1c;
+  background-color: $bg-dark;
   z-index: 1;
   transform: translateZ(1px);
-  color: #fff;
+  color: $bg-dark-contrast;
   padding: 64px 16px;
 
   div.grid {
