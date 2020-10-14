@@ -1,13 +1,15 @@
-main.redirect {
-  width: 100vw;
-  min-height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@use 'common.scss';
+
+section.redirect {
+  padding: 16px;
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100 - 32px);
 
   div {
+    width: fit-content;
     display: flex;
     flex-direction: column;
+    margin-bottom: 32px;
   }
 
   h1 {
@@ -21,20 +23,7 @@ main.redirect {
     margin: 0 0 48px;
   }
 
-  a,
-  a:link {
-    margin-right: 8px;
+  p {
     align-self: flex-end;
-    color: inherit;
-    text-decoration: none;
-    background-position-y: -0%;
-    background-image: linear-gradient(rgba(255, 255, 255, 0) 45%, #fe676a 45%);
-    transition: background 500ms ease;
-    background-size: 2px;
-    background-size: auto 155%;
-  }
-
-  a:hover {
-    background-position-y: 100%;
   }
 }
