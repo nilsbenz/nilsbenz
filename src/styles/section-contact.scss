@@ -19,7 +19,7 @@ section.contact {
       grid-area: image;
       width: 100%;
       z-index: -1;
-      transform: scale(0.5);
+      transform: scale(0.9);
       opacity: 0;
     }
 
@@ -42,7 +42,7 @@ section.contact {
     }
   }
 
-  @media screen and (max-width: 699px) {
+  @media screen and (max-width: 769px) {
     div.grid {
       grid-template-columns: 100%;
       grid-template-rows: auto auto auto 1fr;

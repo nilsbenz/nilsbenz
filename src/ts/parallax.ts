@@ -1,37 +1,22 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+window.addEventListener('scroll', function () {
+  const distance = window.scrollY;
+  const background = <HTMLElement>document.querySelector('.background');
+  background.style.transform = `translateY(${distance * 0.2}px)`;
+
+  const midground = <HTMLElement>document.querySelector('.midground');
+  midground.style.transform = `translateY(${distance * 0.1}px)`;
+
+  const heading = <HTMLElement>document.querySelector('.heading');
+  heading.style.transform = `translateY(${distance * 0.6}px)`;
+});
+
 const getOffset = (factor: number): number =>
   (document.documentElement.scrollHeight - innerHeight) * factor;
 
 gsap.registerPlugin(ScrollTrigger);
-
-gsap.to('.background', {
-  scrollTrigger: {
-    trigger: '.foreground-image',
-    scrub: 0.2,
-  },
-  ease: 'none',
-  y: getOffset(0.15),
-});
-
-gsap.to('.midground', {
-  scrollTrigger: {
-    trigger: '.foreground-image',
-    scrub: 0.2,
-  },
-  ease: 'none',
-  y: getOffset(0.1),
-});
-
-gsap.to('.heading', {
-  scrollTrigger: {
-    trigger: '.foreground-image',
-    scrub: 0.2,
-  },
-  ease: 'none',
-  y: getOffset(0.25),
-});
 
 gsap.to('.scroll-down-icon', {
   scrollTrigger: {
