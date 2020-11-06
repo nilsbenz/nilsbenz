@@ -72,3 +72,12 @@ section.container {
     }
   }
 }
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
