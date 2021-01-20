@@ -2,6 +2,7 @@
   "hosting": {
     "public": "dist",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "cleanUrls": true,
     "redirects": [
       {
         "source": "/kontakt",
@@ -16,11 +17,6 @@
       {
         "source": "/bilder",
         "destination": "/",
-        "type": 301
-      },
-      {
-        "source": "/rabeaundfabio",
-        "destination": "/rabeaundfabio.html",
         "type": 301
       }
     ]
