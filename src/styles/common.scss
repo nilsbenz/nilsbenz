@@ -17,6 +17,7 @@ section.container {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 
   div.content {
     width: 100%;
