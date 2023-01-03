@@ -65,7 +65,7 @@
     <link rel="preconnect" href="https://yt3.ggpht.com" />
     <link rel="preconnect" href="https://static.doubleclick.net" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./main.scss" />
@@ -114,7 +114,8 @@
           <h2 class="about-heading">Über mich</h2>
           <div class="about-text">
             <p>
-              Ich bin Nils, 20 Jahre jung und komme aus dem St. Galler Rheintal.
+              Ich bin Nils, <span id="age">23</span> Jahre jung und komme aus
+              dem St. Galler Rheintal.
             </p>
             <p>
               Im Frühjahr 2020 habe ich die Ausbildung zum EFZ Informatiker
@@ -139,7 +140,8 @@
             <p>
               In den nachfolgenden Abschnitten sind jeweils einige Referenzen
               aufgeführt. Bist du interessiert? Dann
-              <a href="#kontakt">melde dich</a> bei mir!
+              <a id="contact-link" style="cursor: pointer">melde dich</a> bei
+              mir!
             </p>
           </div>
         </div>
@@ -255,17 +257,22 @@
           <h3 class="software-references-heading">Referenzen</h3>
           <div class="software-references-text">
             <p>
-              Meine eigene Website habe ich selber designt und umgesetzt und
-              betreibe diese nun auf Firebase, einem Service von Google.
-              Ausserdem habe ich die Website für die Let's Go Fahrschule (<a
-                href="https://fahrschule-ruegg.ch"
-                target="_blank"
-                >fahrschule-ruegg.ch</a
-              >) und die electro-control süess gmbh (<a
-                href="https://electro-control.ch"
-                target="_blank"
+              Neben meiner eigenen Website habe ich einige weitere Projekte
+              umgesetzt. Zum einen meine Lernplattform für Webtechnologien, das
+              <a href="https://web-dojo.xyz" target="_blank">Web Dojo</a>. Des
+              weiteren realisierte ich die Website für die electro-control süess
+              gmbh (<a href="https://electro-control.ch" target="_blank"
                 >electro-control.ch</a
-              >) realisiert.
+              >).
+            </p>
+            <p>
+              Im Frühjahr 2022 programmierte ich ausserdem eine
+              Auswertungswebsite für eine Studie der Mosayebi Professur an der
+              ETH Zürich. Dabei ging es um die Auswertung von Fragebögen zum
+              Forschungsprojekt
+              <a href="https://mosayebi.arch.ethz.ch/vacancy/" target="_blank"
+                >Vacancy</a
+              >.
             </p>
             <p>
               Für weitere Referenzen kannst du dich gerne persönlich bei mir
@@ -283,7 +290,7 @@
       </div>
     </section>
     <section class="contact container">
-      <div class="content" id="kontakt">
+      <div class="content" id="contact">
         <div class="grid">
           <img
             src="assets/images/contact-large.jpg"

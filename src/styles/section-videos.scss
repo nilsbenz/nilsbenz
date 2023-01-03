@@ -56,17 +56,18 @@ section.videos {
 
       .videos-carousel-cell {
         width: 80%;
-        background: $grey;
         margin: 0 1vw;
       }
     }
   }
 
   .video {
-    background-color: $grey;
     position: relative;
     height: 0;
     padding-bottom: 56.25%;
+    background: $grey;
+    border-radius: 4px;
+    overflow: hidden;
 
     iframe {
       background-color: $grey;
