@@ -14,8 +14,10 @@ body {
   background-color: $bg-light;
 }
 
-img {
-  border-radius: 4px;
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px #{$accent};
+  transition: box-shadow 0.2s ease;
 }
 
 section.container {

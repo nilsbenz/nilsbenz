@@ -1,0 +1,28 @@
+@import 'common.scss';
+
+nav {
+  z-index: 2;
+  background-color: $bg-dark;
+  background-color: #{$bg-dark}cc;
+  color: $bg-dark-contrast;
+  position: sticky;
+  top: 0;
+  padding: 16px 8px;
+  backdrop-filter: blur(12px);
+  transform: translateZ(1px);
+
+  ul {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      cursor: pointer;
+      padding: 4px 8px;
+    }
+  }
+}

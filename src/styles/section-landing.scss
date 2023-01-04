@@ -1,7 +1,19 @@
 @import './common.scss';
 
+section.landing::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: min(-10vh, -64px);
+  height: max(10vh, 64px);
+  background-color: $bg-dark;
+  z-index: 1;
+}
+
 section.landing {
   background-color: $bg-light;
+  position: relative;
 
   .background,
   .midground,
