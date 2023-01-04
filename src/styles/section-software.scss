@@ -7,102 +7,57 @@ section.software {
   transform: translateZ(1px);
   color: $bg-dark-contrast;
   padding: 64px 16px;
+  position: relative;
+
+  img.software-image {
+    width: 30%;
+    z-index: -1;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+  }
+
+  h2.software-heading-small {
+    display: none;
+  }
 
   div.grid {
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: auto auto auto 1fr;
-    grid-template-areas: 'heading heading' 'image qualifications' 'references-heading references-text' 'interested-heading interested-text';
     grid-gap: 24px 48px;
+    margin-top: 32px;
 
-    div.software-qualifications,
-    h3.software-references-heading,
-    div.software-references-text,
-    h3.software-interested-heading,
-    h3.software-interested-heading,
-    div.software-interested-text {
+    h3,
+    div {
       opacity: 0;
     }
 
-    img.software-image {
-      grid-area: image;
-      width: 120%;
-      z-index: -1;
-      margin: 10% 0 -100%;
-    }
-
-    h2.software-heading {
-      grid-area: heading;
-      margin-bottom: 32px;
-      margin-bottom: -5%;
-    }
-
-    h2.software-heading-small {
-      display: none;
-    }
-
-    div.software-qualifications {
-      grid-area: qualifications;
-    }
-
-    h3.software-references-heading {
-      grid-area: references-heading;
+    h3 {
       justify-self: end;
       margin-top: 8px;
-    }
-
-    div.software-references-text {
-      grid-area: references-text;
-    }
-
-    h3.software-interested-heading {
-      grid-area: interested-heading;
-      justify-self: end;
-      margin-top: 8px;
-    }
-
-    div.software-interested-text {
-      grid-area: interested-text;
     }
   }
 
   @media screen and (max-width: 699px) {
+    h2.software-heading-small {
+      display: inline-block;
+    }
+
+    h2.software-heading-large {
+      display: none;
+    }
+
+    img.software-image {
+      width: 60%;
+    }
+
     div.grid {
       grid-template-columns: 100%;
-      grid-template-rows: auto 0 auto auto auto auto auto 1fr;
-      grid-template-areas: 'heading' 'image' 'qualifications' 'references-heading' 'references-text' 'interested-heading' 'interested-text';
-      overflow-x: hidden;
       grid-gap: 16px;
+      margin-top: 16px;
 
-      img.software-image {
-        width: 70%;
-        margin: -10% 0 0 -40%;
-      }
-
-      h2.software-heading {
-        margin-bottom: 32px;
-        margin: 0;
-        overflow-wrap: break-word;
-      }
-
-      div.software-qualifications {
-        margin-top: 16px;
-      }
-
-      h2.software-heading-small {
-        display: inline-block;
-      }
-
-      h2.software-heading-large {
-        display: none;
-      }
-
-      h3.software-references-heading {
-        justify-self: start;
-        margin: 16px 0 -16px;
-      }
-
-      h3.software-interested-heading {
+      h3 {
         justify-self: start;
         margin: 16px 0 -16px;
       }

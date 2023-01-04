@@ -89,14 +89,24 @@ gsap.to('.software-image', {
   scrollTrigger: {
     trigger: '.software-image',
     scrub: 0.2,
+    end: 'bottom -10%',
   },
   ease: 'none',
-  x: getOffset(0.1),
+  x: getOffset(0.05),
+  y: getOffset(0.02),
 });
 
-gsap.to('.software-qualifications', {
+gsap.to('.software-qualifications-heading', {
   scrollTrigger: {
-    trigger: '.software-qualifications',
+    trigger: '.software-qualifications-heading',
+    start: 'top 80%',
+  },
+  opacity: 1,
+});
+
+gsap.to('.software-qualifications-text', {
+  scrollTrigger: {
+    trigger: '.software-qualifications-text',
     start: 'top 75%',
   },
   opacity: 1,

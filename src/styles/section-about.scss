@@ -7,6 +7,7 @@ section.about {
   transform: translateZ(1px);
   color: $bg-dark-contrast;
   padding: 64px 16px;
+  overflow-y: hidden;
 
   div.grid {
     display: grid;
