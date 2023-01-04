@@ -120,6 +120,8 @@ section.landing {
       img.scroll-down-icon {
         width: 40px;
         animation: scroll-down-animation 3s ease-in-out infinite;
+        padding: 4px 8px;
+        cursor: pointer;
       }
     }
   }

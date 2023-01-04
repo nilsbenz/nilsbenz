@@ -14,3 +14,7 @@ if (ageText) {
 document.querySelector('#contact-link')?.addEventListener('click', () => {
   document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
 });
+
+document.querySelector('#scroll-down-button')?.addEventListener('click', () => {
+  document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' });
+});
