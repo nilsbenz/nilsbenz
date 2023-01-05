@@ -25,38 +25,22 @@ const handleEnterPressed = (selector: string) => (e: any) => {
   }
 };
 
-document
-  .querySelector('#contact-link')
-  ?.addEventListener('click', () => scrollIntoView('#contact'));
-
-document
-  .querySelector('#contact-link')
-  ?.addEventListener('keypress', handleEnterPressed('#contact'));
-
-document.querySelector('#scroll-down-button')?.addEventListener('click', () => {
-  document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' });
+document.querySelectorAll('.about-link').forEach((element) => {
+  element.addEventListener('click', () => scrollIntoView('#about'));
+  element.addEventListener('keypress', handleEnterPressed('#about'));
 });
 
-document
-  .querySelector('#nav-videos')
-  ?.addEventListener('click', () => scrollIntoView('#videos'));
+document.querySelectorAll('.videos-link').forEach((element) => {
+  element.addEventListener('click', () => scrollIntoView('#videos'));
+  element.addEventListener('keypress', handleEnterPressed('#videos'));
+});
 
-document
-  .querySelector('#nav-videos')
-  ?.addEventListener('keypress', handleEnterPressed('#videos'));
+document.querySelectorAll('.software-link').forEach((element) => {
+  element.addEventListener('click', () => scrollIntoView('#software'));
+  element.addEventListener('keypress', handleEnterPressed('#software'));
+});
 
-document
-  .querySelector('#nav-software')
-  ?.addEventListener('click', () => scrollIntoView('#software'));
-
-document
-  .querySelector('#nav-software')
-  ?.addEventListener('keypress', handleEnterPressed('#software'));
-
-document
-  .querySelector('#nav-contact')
-  ?.addEventListener('click', () => scrollIntoView('#contact'));
-
-document
-  .querySelector('#nav-contact')
-  ?.addEventListener('keypress', handleEnterPressed('#contact'));
+document.querySelectorAll('.contact-link').forEach((element) => {
+  element.addEventListener('click', () => scrollIntoView('#contact'));
+  element.addEventListener('keypress', handleEnterPressed('#contact'));
+});

@@ -30,6 +30,10 @@ body {
   background-color: #{$accent}69;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 section.container {
   display: flex;
   justify-content: center;

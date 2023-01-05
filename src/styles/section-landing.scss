@@ -101,6 +101,7 @@ section.landing {
   .foreground {
     position: relative;
     height: 90vh;
+    pointer-events: none;
 
     .foreground-image {
       background-image: url(assets/images/foreground.svg);
@@ -116,6 +117,7 @@ section.landing {
       display: flex;
       justify-content: center;
       align-items: center;
+      pointer-events: all;
 
       @keyframes scroll-down-animation {
         0% {
