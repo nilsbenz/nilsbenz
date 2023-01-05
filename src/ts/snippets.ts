@@ -19,6 +19,14 @@ const handleChangeLanguage = (lang: 'de' | 'en') => () => {
   document.querySelector('html')?.setAttribute('lang', lang);
 };
 
+if (
+  navigator &&
+  navigator.language &&
+  navigator.language.toLowerCase().startsWith('en')
+) {
+  handleChangeLanguage('en')();
+}
+
 const langDeButton = document.querySelector('#lang-de');
 const langEnButton = document.querySelector('#lang-en');
 
