@@ -1,3 +1,5 @@
+const LANGUAGE_KEY = 'lang';
+
 const getAge = () => {
   const now = new Date();
   if (now.getMonth() === 0 && now.getDate() < 16) {
@@ -17,12 +19,16 @@ if (copyrightYearText) {
 
 const handleChangeLanguage = (lang: 'de' | 'en') => () => {
   document.querySelector('html')?.setAttribute('lang', lang);
+  localStorage.setItem(LANGUAGE_KEY, lang);
 };
 
+const selectedLanguage = localStorage.getItem(LANGUAGE_KEY);
 if (
-  navigator &&
-  navigator.language &&
-  navigator.language.toLowerCase().startsWith('en')
+  selectedLanguage === 'en' ||
+  (selectedLanguage === undefined &&
+    navigator &&
+    navigator.language &&
+    !navigator.language.toLowerCase().startsWith('de'))
 ) {
   handleChangeLanguage('en')();
 }
