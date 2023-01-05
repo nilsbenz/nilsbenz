@@ -1,0 +1,66 @@
+@import 'common.scss';
+
+html[lang='de'] header .container .langs span {
+  @media screen and (max-width: 369px) {
+    display: none;
+  }
+}
+
+html[lang='en'] header .container .langs span {
+  @media screen and (max-width: 389px) {
+    display: none;
+  }
+}
+
+header {
+  z-index: 2;
+  background-color: $bg-dark;
+  background-color: #{$bg-dark}cc;
+  color: $bg-dark-contrast;
+  position: sticky;
+  top: 0;
+  padding: 16px 8px;
+  backdrop-filter: blur(12px);
+  transform: translateZ(1px);
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .langs button,
+    nav ul li {
+      padding: 4px 8px;
+      transition: background-color 0.2s ease;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #{$bg-light}16;
+        background-color: rgba(242, 242, 242, 0.086);
+      }
+    }
+
+    .langs {
+      color: #{$bg-dark-contrast}69;
+
+      button {
+        background: none;
+        border: none;
+        color: inherit;
+        font: inherit;
+      }
+    }
+
+    nav {
+      ul {
+        display: flex;
+        gap: 8px;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+}

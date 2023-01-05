@@ -6,15 +6,27 @@ const getAge = () => {
   return now.getFullYear() - 2000;
 };
 
-const ageText = document.querySelector('#age');
-if (ageText) {
-  ageText.innerHTML = String(getAge());
-}
+document.querySelectorAll('.age').forEach((element) => {
+  element.innerHTML = String(getAge());
+});
 
 const copyrightYearText = document.querySelector('#copyright-year');
 if (copyrightYearText) {
   copyrightYearText.innerHTML = String(new Date().getFullYear());
 }
+
+const handleChangeLanguage = (lang: 'de' | 'en') => () => {
+  document.querySelector('html')?.setAttribute('lang', lang);
+};
+
+const langDeButton = document.querySelector('#lang-de');
+const langEnButton = document.querySelector('#lang-en');
+
+langDeButton?.addEventListener('click', handleChangeLanguage('de'));
+langDeButton?.addEventListener('keypress', handleChangeLanguage('de'));
+
+langEnButton?.addEventListener('click', handleChangeLanguage('en'));
+langEnButton?.addEventListener('keypress', handleChangeLanguage('en'));
 
 const scrollIntoView = (selector: string) =>
   document.querySelector(selector)?.scrollIntoView({ behavior: 'smooth' });

@@ -5,8 +5,8 @@ section.landing::after {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: min(-10vh, -64px);
-  height: max(10vh, 64px);
+  bottom: min(calc(-10vh - 24px), -64px);
+  height: max(calc(10vh + 24px), 64px);
   background-color: $bg-dark;
   z-index: 1;
 }

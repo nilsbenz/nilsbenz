@@ -82,8 +82,23 @@
       </div>
       <div class="heading">
         <div>
-          <h1>Hallo,&nbsp;ich<br />bin&nbsp;Nils</h1>
-          <h2><span class="software-link pointer">Softwareentwickler</span> und <span class="videos-link pointer">Filmemacher</span></h2>
+          <span class="de">
+            <h1>Hallo,&nbsp;ich<br />bin&nbsp;Nils</h1>
+          </span>
+          <span class="en">
+            <h1>Hey there,<br />I&nbsp;am&nbsp;Nils</h1>
+          </span>
+          <h2>
+            <span class="software-link pointer">
+              <span class="de">Softwareentwickler</span>
+              <span class="en">Programmer</span>
+            </span>
+            <span class="de">und</span> <span class="en">and</span>
+            <span class="videos-link pointer">
+              <span class="de">Filmemacher</span>
+              <span class="en">Filmmaker</span>
+            </span>
+          </h2>
         </div>
       </div>
       <div class="foreground">
@@ -97,13 +112,28 @@
         </div>
       </div>
     </section>
-    <nav>
-      <ul>
-        <li tabindex="0" class="videos-link">Videos</li>
-        <li tabindex="0" class="software-link">Software</li>
-        <li tabindex="0" class="contact-link">Kontakt</li>
+    <header>
+      <div class="container">
+        <div class="langs">
+          <button id="lang-de">DE</button><span>|</span
+          ><button id="lang-en">EN</button>
+        </div>
+        <nav>
+          <ul>
+            <li tabindex="0" class="videos-link">
+              <span class="de">Videos</span><span class="en">Films</span>
+            </li>
+            <li tabindex="0" class="software-link">
+              <span class="de">Software</span>
+              <span class="en">Programming</span>
+            </li>
+            <li tabindex="0" class="contact-link">
+              <span class="de">Kontakt</span><span class="en">Contact</span>
+            </li>
+          </ul>
+        </nav>
       </div>
-    </nav>
+    </header>
     <section class="about container" id="about">
       <div class="content">
         <div class="grid">
@@ -118,37 +148,71 @@
             alt="Nils Benz - Über mich"
             class="about-image"
           />
-          <h2 class="about-heading">Über mich</h2>
+          <h2 class="about-heading">
+            <span class="de">Über mich</span>
+            <span class="en">About me</span>
+          </h2>
           <div class="about-text">
-            <p>
-              Ich bin Nils, <span id="age">23</span> Jahre jung und komme aus
+            <p class="de">
+              Ich bin Nils, <span class="age">23</span> Jahre jung und komme aus
               dem St. Galler Rheintal.
             </p>
-            <p>
+            <p class="en">
+              I am Nils, <span class="age">23</span> years old and come from the
+              the eastern part of Switzerland.
+            </p>
+            <p class="de">
               Im Frühjahr 2020 habe ich die Ausbildung zum EFZ Informatiker
               Fachrichtung Applikations&shy;entwicklung abgeschlossen. Parallel
               dazu habe ich Erfahrungen im Bereich Videoproduktion gesammelt.
               Aktuell studiere ich Informatik an der ETH Zürich.
             </p>
-            <p>
+            <p class="en">
+              In 2020 I completed my apprenticeship as an EFZ Software Engineer
+              at Adcubum AG in St. Gallen. At the same time, I gained experience
+              in the field of video production. I am currently studying computer
+              science at ETH Zurich.
+            </p>
+            <p class="de">
               Im Rahmen meiner Einzelfirma
               <a
                 href="https://www.uid.admin.ch/Detail.aspx?uid_id=CHE148682214"
                 target="_blank"
               >
-                Nils Benz Software und Video</a
-              >
+                Nils Benz Software und Video
+              </a>
               programmiere ich Websites und Apps für kleine Unternehmen und
               Einzelpersonen. Ausserdem produziere ich Videos. Ich halte
               beispielsweise den ganz besonderen Tag für ein Hochzeitspaar fest
               oder erstelle einen Werbeclip für verschiedenste Produkte und
               Dienstleistungen.
             </p>
-            <p>
+            <p class="en">
+              I founded a sole proprietorship
+              <a
+                href="https://www.uid.admin.ch/Detail.aspx?uid_id=CHE148682214"
+                target="_blank"
+              >
+                Nils Benz Software und Video</a
+              >
+              and make websites and apps for small companies and individuals. I
+              also produce films, for example for wedding couples, but also
+              small ads for a variety of products and services.
+            </p>
+            <p class="de">
               In den nachfolgenden Abschnitten sind jeweils einige Referenzen
               aufgeführt. Bist du interessiert? Dann
-              <a class="contact-link" style="cursor: pointer" tabindex="0">melde dich</a> bei
-              mir!
+              <a class="contact-link" style="cursor: pointer" tabindex="0">
+                melde dich</a
+              >
+              bei mir!
+            </p>
+            <p class="en">
+              In the following sections I included some references. Are you
+              interested? Then don't hesitate to
+              <a class="contact-link" style="cursor: pointer" tabindex="0">
+                get in touch</a
+              >!
             </p>
           </div>
         </div>
@@ -168,22 +232,55 @@
             alt="Nils Benz - Videos"
             class="videos-image"
           />
-          <h2 class="videos-heading">Videografie</h2>
+          <h2 class="videos-heading">
+            <span class="de">Videografie</span>
+            <span class="en">Videography</span>
+          </h2>
           <div class="videos-text">
-            <p>
+            <p class="de">
               Neben meinem Job als Informatiker produziere ich Videos. Ich halte
               beispielsweise den ganz besonderen Tag für ein Hochzeitspaar fest
               oder erstelle einen Werbeclip für ein kleines Unternehmen.
             </p>
-            <p>
-              Ich verwende die
-              <a href="https://adobe.com/creativecloud.html" target="_blank">
-                Creative Cloud</a
+            <p class="en">
+              In addition to my job as a computer scientist, I produce videos.
+              For example, I capture the very special day for a wedding couple
+              or create an advertising clip for a small company.
+            </p>
+            <p class="de">
+              Ich verwende den Videoeditor
+              <a
+                href="https://www.blackmagicdesign.com/products/davinciresolve"
+                target="_blank"
               >
-              von Adobe und habe eine Lizenz bei
+                DaVinci Resolve</a
+              >
+              von Blackmagic Design und habe eine Lizenz bei
               <a href="https://epidemicsound.com/" target="_blank">
                 Epidemic Sound</a
-              >. Nachfolgend habe ich einige meiner Projekte veröffentlicht.
+              >. Ich habe ausserdem Erfahrung mit der
+              <a href="https://adobe.com/creativecloud.html" target="_blank"
+                >Creative Cloud</a
+              >
+              von Adobe. Nachfolgend habe ich einige meiner Projekte
+              veröffentlicht.
+            </p>
+            <p class="en">
+              I use the video editor
+              <a
+                href="https://www.blackmagicdesign.com/products/davinciresolve"
+                target="_blank"
+              >
+                DaVinci Resolve</a
+              >
+              from Blackmagic Design and have a license at
+              <a href="https://epidemicsound.com/" target="_blank">
+                Epidemic Sound</a
+              >. Additionally I have experience with the
+              <a href="https://adobe.com/creativecloud.html" target="_blank"
+                >Creative Cloud</a
+              >
+              by Adobe. Below I listed some of my past projects.
             </p>
           </div>
           <div class="videos-main-player">
@@ -237,33 +334,49 @@
     </section>
     <section class="software container" id="software">
       <div class="content">
-        <h2 class="software-heading software-heading-large">
+        <h2 class="software-heading software-heading-large de">
           Softwareentwicklung
         </h2>
-        <h2 class="software-heading software-heading-small">
+        <h2 class="software-heading software-heading-small de">
           Software-<br />entwicklung
         </h2>
+        <h2 class="en">Software Engineering</h2>
         <img
           src="assets/images/code.svg"
           alt="Code Icon"
           class="software-image"
         />
         <div class="grid">
-          <h3 class="software-qualifications-heading">Was ich kann</h3>
+          <h3 class="software-qualifications-heading">
+            <span class="de">Was ich kann</span>
+            <span class="en">How I learned it</span>
+          </h3>
           <div class="software-qualifications-text">
-            <p>
+            <p class="de">
               In Frühjahr 2020 habe ich meine Ausbildung zum EFZ Informatiker
               Fachrichtung Applikationsentwicklung abgeschlossen. Aktuell
               studiere ich Informatik an der ETH Zürich.
             </p>
-            <p>
+            <p class="en">
+              In 2020 I completed my apprenticeship as an EFZ Software Engineer
+              at Adcubum AG in St. Gallen. I am currently studying computer
+              science at ETH Zurich.
+            </p>
+            <p class="de">
               Neben meinem Studium programmiere ich Websites und Apps für
               Einzelpersonen und kleine Unternehmen.
             </p>
+            <p class="en">
+              Besides my studies I program websites and apps for individuals and
+              small businesses.
+            </p>
           </div>
-          <h3 class="software-references-heading">Referenzen</h3>
+          <h3 class="software-references-heading">
+            <span class="de">Referenzen</span>
+            <span class="en">Past projects</span>
+          </h3>
           <div class="software-references-text">
-            <p>
+            <p class="de">
               Neben meiner eigenen Website habe ich einige weitere Projekte
               umgesetzt. Zum einen meine Lernplattform für Webtechnologien, das
               <a href="https://web-dojo.xyz" target="_blank">Web Dojo</a>. Des
@@ -272,7 +385,18 @@
                 >electro-control.ch</a
               >).
             </p>
-            <p>
+            <p class="en">
+              In addition to my own website, I have implemented a number of
+              other projects. For example my learning platform for web
+              technologies, the
+              <a href="https://web-dojo.xyz" target="_blank">web dojo</a>. I
+              also created the website for electro-control süess gmbh (<a
+                href="https://electro-control.ch"
+                target="_blank"
+                >electro-control.ch</a
+              >).
+            </p>
+            <p class="de">
               Im Frühjahr 2022 programmierte ich ausserdem eine
               Auswertungswebsite für eine Studie der Mosayebi Professur an der
               ETH Zürich. Dabei ging es um die Auswertung von Fragebögen zum
@@ -281,16 +405,33 @@
                 >Vacancy</a
               >.
             </p>
-            <p>
+            <p class="en">
+              In spring 2022 I also programmed an evaluation website for a study
+              by the Mosayebi professorship at ETH Zurich. It was about the
+              evaluation of questionnaires for the research project
+              <a href="https://mosayebi.arch.ethz.ch/vacancy/" target="_blank"
+                >Vacancy</a
+              >.
+            </p>
+            <p class="de">
               Für weitere Referenzen kannst du dich gerne persönlich bei mir
               melden.
             </p>
+            <p class="en">
+              For further references you are welcome to contact me personally.
+            </p>
           </div>
-          <h3 class="software-interested-heading">Interessiert?</h3>
+          <h3 class="software-interested-heading">
+            <span class="de">Interessiert?</span>
+            <span class="en">Interested?</span>
+          </h3>
           <div class="software-interested-text">
-            <p>
+            <p class="de">
               Dann melde dich bei mir! Ich würde mich freuen, dein Projekt
               realisieren zu dürfen.
+            </p>
+            <p class="en">
+              Then get in touch! I would be happy to realize your project.
             </p>
           </div>
         </div>
@@ -319,7 +460,9 @@
               >
             </p>
           </div>
-          <h3 class="contact-heading">Kontakt</h3>
+          <h3 class="contact-heading">
+            <span class="de">Kontakt</span> <span class="en">Contact</span>
+          </h3>
           <div class="contact-text">
             <p>
               Nils Benz Software und Video<br />
@@ -335,7 +478,8 @@
       </div>
     </section>
     <footer>
-      <span class="copy">©</span> <span id="copyright-year">2023</span> nilsbenz.ch
+      <span class="copy">©</span>
+      <span id="copyright-year">2023</span> nilsbenz.ch
     </footer>
     <script src="./index.ts"></script>
   </body>

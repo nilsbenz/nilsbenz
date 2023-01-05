@@ -1,5 +1,5 @@
 $bg-dark: #1c1c1c;
-$bg-dark-contrast: #fff;
+$bg-dark-contrast: #ffffff;
 $bg-light: #f2f2f2;
 $bg-light-contrast: #000;
 $grey: #8c8c88;
@@ -12,6 +12,16 @@ body {
   margin: 0;
   font-family: 'Roboto Mono', monospace;
   background-color: $bg-light;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+html[lang='de'] .en {
+  display: none !important;
+}
+
+html[lang='en'] .de {
+  display: none !important;
 }
 
 :focus-visible {
