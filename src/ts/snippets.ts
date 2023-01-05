@@ -11,6 +11,11 @@ if (ageText) {
   ageText.innerHTML = String(getAge());
 }
 
+const copyrightYearText = document.querySelector('#copyright-year');
+if (copyrightYearText) {
+  copyrightYearText.innerHTML = String(new Date().getFullYear());
+}
+
 const scrollIntoView = (selector: string) =>
   document.querySelector(selector)?.scrollIntoView({ behavior: 'smooth' });
 
