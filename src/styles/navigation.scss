@@ -23,6 +23,12 @@ nav {
     li {
       cursor: pointer;
       padding: 4px 8px;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: #{$bg-light}16;
+        background-color: rgba(242, 242, 242, 0.086);
+      }
     }
   }
 }

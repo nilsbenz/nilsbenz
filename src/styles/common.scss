@@ -20,6 +20,16 @@ body {
   transition: box-shadow 0.2s ease;
 }
 
+::selection {
+  background-color: $accent;
+  background-color: #{$accent}69;
+}
+
+::-moz-selection {
+  background-color: $accent;
+  background-color: #{$accent}69;
+}
+
 section.container {
   display: flex;
   justify-content: center;
