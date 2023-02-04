@@ -1,7 +1,7 @@
 $bg-dark: #1c1c1c;
-$bg-dark-contrast: #ffffff;
+$bg-dark-contrast: #f2f2f2;
 $bg-light: #f2f2f2;
-$bg-light-contrast: #000;
+$bg-light-contrast: #1c1c1c;
 $grey: #8c8c88;
 $primary-dark: #306f7d;
 $primary-light: #aad7da;
@@ -14,6 +14,7 @@ body {
   background-color: $bg-light;
   text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  color: $bg-light-contrast;
 }
 
 html[lang='de'] .en {

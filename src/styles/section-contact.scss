@@ -30,6 +30,16 @@ section.contact {
 
     div.socialmedia-text {
       grid-area: socialmedia-text;
+
+      p {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 2.25rem max-content;
+
+        img {
+          height: 1.5rem;
+        }
+      }
     }
 
     h3.contact-heading {
