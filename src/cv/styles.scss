@@ -1,0 +1,271 @@
+@import '../styles/common.scss';
+
+$p-small: 2rem;
+$p-large: 3rem;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+p ~ p {
+  margin-top: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-template-areas: 'image' 'hero' 'details' 'description';
+  min-height: 100vh;
+  min-height: 100dvh;
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 100%;
+
+  h2 {
+    font-size: 2.1rem;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  .portrait-image,
+  .hero {
+    background-color: $bg-dark;
+    color: $bg-dark-contrast;
+    position: relative;
+  }
+
+  .portrait-image {
+    grid-area: image;
+    padding: $p-small;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+
+    & > img {
+      width: 100%;
+      max-width: 400px;
+      object-fit: cover;
+    }
+  }
+
+  .hero {
+    grid-area: hero;
+    padding: 0 $p-small $p-small;
+    display: flex;
+    flex-direction: column;
+    gap: $p-small;
+
+    h1 {
+      font-size: clamp(3rem, 6vw, 4rem);
+    }
+
+    .spacer {
+      width: 100%;
+      height: $p-large;
+    }
+  }
+
+  .description {
+    grid-area: description;
+    padding: $p-small;
+    position: sticky;
+    top: 0;
+    height: max-content;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .social-media {
+      display: flex;
+      gap: 1rem;
+
+      a {
+        background: none;
+        height: 2rem;
+
+        img {
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+    }
+  }
+
+  .details {
+    grid-area: details;
+    padding: $p-small;
+
+    .education,
+    .experience {
+      &--grid {
+        padding: 1rem 0 3rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        align-items: center;
+
+        p {
+          margin: 0;
+        }
+      }
+
+      &--duration {
+        font-size: 1.8rem;
+        line-height: 100%;
+        font-weight: 600;
+        color: rgba($bg-light-contrast, 0.4);
+      }
+
+      &--description {
+        & p:first-child {
+          font-size: 1.25rem;
+          font-weight: 600;
+          line-height: 100%;
+          margin: 0.1rem 0;
+        }
+
+        & p:not(:first-child):not(:last-child) {
+          margin-bottom: 0.5rem;
+        }
+
+        & p ~ p {
+          line-height: 1.25rem;
+        }
+      }
+    }
+  }
+
+  .skills {
+    &--grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    &--item {
+      aspect-ratio: 1 / 1;
+      display: grid;
+      place-items: center;
+      position: relative;
+
+      $duration: 0.35s;
+      transition: all $duration ease;
+      background-color: $bg-light;
+
+      svg {
+        max-width: 40%;
+      }
+
+      p {
+        opacity: 0;
+        scale: 0.95;
+        transform: translateY(1rem);
+        position: absolute;
+        width: calc(80vw - 4rem);
+        bottom: calc(100% - 1rem);
+
+        padding: 2rem;
+        backdrop-filter: blur(10px);
+        background-color: rgba($bg-dark, 0.6);
+        color: $bg-dark-contrast;
+        pointer-events: none;
+        z-index: 1;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 25px 50px -12px;
+
+        transition: all $duration ease;
+      }
+
+      &:nth-child(3n - 2) {
+        p {
+          left: -1rem;
+        }
+      }
+
+      &:nth-child(3n) {
+        p {
+          right: -1rem;
+        }
+      }
+
+      &:hover,
+      &:focus-visible {
+        background-color: $bg-dark;
+        color: $bg-dark-contrast;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+        z-index: 1;
+
+        p {
+          opacity: 1;
+          scale: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 640px) {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 'image hero' 'description details';
+
+    .portrait-image > img {
+      width: 30vw;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: $p-small 0;
+    }
+
+    .details {
+      padding-left: 0;
+    }
+
+    .skills {
+      &--item {
+        p {
+          width: min(40ch, calc(70vw - 8rem));
+          bottom: calc(100% - 2rem);
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    grid-template-columns: min-content 1fr auto;
+    grid-template-areas: 'image details description' 'hero details description';
+
+    .portrait-image::before,
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      background-color: $bg-dark;
+      transform: translateX(-100%);
+    }
+
+    .hero {
+      justify-content: flex-start;
+      padding: 0 $p-small $p-small;
+    }
+
+    .details {
+      padding: $p-small;
+    }
+  }
+}
