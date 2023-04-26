@@ -166,7 +166,7 @@ p ~ p {
         max-width: 40%;
       }
 
-      p {
+      & > div {
         opacity: 0;
         scale: 0.95;
         transform: translateY(1rem);
@@ -186,13 +186,13 @@ p ~ p {
       }
 
       &:nth-child(3n - 2) {
-        p {
+        & > div {
           left: -1rem;
         }
       }
 
       &:nth-child(3n) {
-        p {
+        & > div {
           right: -1rem;
         }
       }
@@ -204,7 +204,7 @@ p ~ p {
         box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
         z-index: 1;
 
-        p {
+        & > div {
           opacity: 1;
           scale: 1;
           transform: translateY(0);
@@ -235,7 +235,7 @@ p ~ p {
 
     .skills {
       &--item {
-        p {
+        & > div {
           width: min(40ch, calc(70vw - 8rem));
           bottom: calc(100% - 2rem);
         }
