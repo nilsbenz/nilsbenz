@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel ./src/index.html",
-    "build": "parcel build ./src/*.html ./src/browserconfig.xml ./src/site.webmanifest"
+    "start:cv": "parcel ./src/cv/index.html",
+    "build": "parcel build ./src/*.html ./src/cv/index.html ./src/browserconfig.xml ./src/site.webmanifest"
   },
   "keywords": [],
   "author": "",
