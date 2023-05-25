@@ -1,0 +1,62 @@
+@import '../styles/common.scss';
+
+body {
+  max-width: 65ch;
+  margin: 0 auto;
+  padding: 3rem 1rem 2rem;
+}
+
+header {
+  margin-bottom: 3rem;
+
+  .me {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    margin-bottom: 3rem;
+    gap: 1rem;
+
+    img {
+      width: 100%;
+      max-width: 16rem;
+      display: block;
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 25px 50px -12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: none;
+
+      &:hover {
+        transform: scale(1.025);
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 25px 50px -12px;
+      }
+    }
+
+    div {
+      align-self: center;
+
+      & > * {
+        margin: 0;
+      }
+    }
+
+    @media screen and (max-width: 509px) {
+      grid-template-columns: 1fr;
+
+      img {
+        margin: 0 auto;
+        max-width: calc(100% - 4rem);
+      }
+
+      div {
+        h1 {
+          text-align: center;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  .to {
+    & > p {
+      margin: 0;
+    }
+  }
+}
