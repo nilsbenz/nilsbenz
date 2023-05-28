@@ -1,17 +1,21 @@
-const image = document.querySelector('#portrait');
-let root = document.documentElement;
+const images = document.querySelectorAll('.hover-transform');
+const imageCenters = Array(images).map(() => ({ x: 0, y: 0 }));
+const root = document.documentElement;
 
-if (image) {
-  let imageCenter = { x: 0, y: 0 };
-
-  const calculateImageCenter = () => {
+const calculateImageCenters = () => {
+  images.forEach((image, index) => {
     const { top, left } = image.getBoundingClientRect();
-    imageCenter = {
-      x: left + image.clientWidth / 2,
-      y: top + image.clientHeight / 2,
+    imageCenters[index] = {
+      x: left + root.scrollLeft + image.clientWidth / 2,
+      y: top + root.scrollTop + image.clientHeight / 2,
     };
-  };
+  });
+};
 
+calculateImageCenters();
+window.addEventListener('resize', calculateImageCenters);
+
+images.forEach((image, index) => {
   const animateTo = ({
     translateX,
     translateY,
@@ -32,14 +36,10 @@ if (image) {
 
   const handleMouseMove = (e: MouseEvent) => {
     const { clientX, clientY } = e;
-    let translateX = (clientX + root.scrollLeft - imageCenter.x) / 16;
-    let translateY = (clientY + root.scrollTop - imageCenter.y) / 16;
+    let translateX = (clientX + root.scrollLeft - imageCenters[index].x) / 16;
+    let translateY = (clientY + root.scrollTop - imageCenters[index].y) / 16;
     animateTo({ translateX, translateY });
   };
-
-  calculateImageCenter();
-
-  window.addEventListener('resize', calculateImageCenter);
 
   image.addEventListener('mouseenter', () => {
     document.addEventListener('mousemove', handleMouseMove);
@@ -49,4 +49,4 @@ if (image) {
     document.removeEventListener('mousemove', handleMouseMove);
     animateTo({ translateX: 0, translateY: 0 });
   });
-}
+});

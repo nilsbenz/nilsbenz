@@ -45,6 +45,16 @@ html[lang='en'] .de {
   cursor: pointer;
 }
 
+.hover-transform {
+  display: block;
+  transition: scale 0.3s ease;
+  cursor: none;
+
+  &:hover {
+    scale: 1.025;
+  }
+}
+
 section.container {
   display: flex;
   justify-content: center;

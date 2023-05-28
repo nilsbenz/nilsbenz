@@ -49,12 +49,13 @@ p ~ p {
     padding: $p-small;
     display: flex;
     justify-content: center;
-    pointer-events: none;
 
     & > img {
       width: 100%;
       max-width: 400px;
+      aspect-ratio: 1 / 1;
       object-fit: cover;
+      background-color: $bg-light;
     }
   }
 
