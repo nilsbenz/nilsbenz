@@ -32,8 +32,8 @@ if (image) {
 
   const handleMouseMove = (e: MouseEvent) => {
     const { clientX, clientY } = e;
-    let translateX = (clientX - imageCenter.x) / 16;
-    let translateY = (clientY - imageCenter.y) / 16;
+    let translateX = (clientX + root.scrollLeft - imageCenter.x) / 16;
+    let translateY = (clientY + root.scrollTop - imageCenter.y) / 16;
     animateTo({ translateX, translateY });
   };
 
