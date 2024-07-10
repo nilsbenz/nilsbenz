@@ -1,0 +1,19 @@
+{
+  "name": "Sabine & Marco – 13. Juli 2024",
+  "short_name": "Sabine & Marco",
+  "icons": [
+    {
+      "src": "../assets/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "../assets/icons/android-chrome-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#1c1c1c",
+  "background_color": "#1c1c1c",
+  "display": "standalone"
+}

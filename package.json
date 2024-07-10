@@ -7,7 +7,7 @@
     "start": "parcel ./src/index.html",
     "start:cv": "parcel ./src/cv/index.html",
     "start:application": "parcel ./src/applications/ubique.html",
-    "build": "parcel build ./src/*.html ./src/cv/index.html ./src/browserconfig.xml ./src/site.webmanifest"
+    "build": "parcel build ./src/*.html ./src/cv/index.html ./src/sabineundmarco/*.html ./src/browserconfig.xml ./src/site.webmanifest ./src/sabineundmarco/site.webmanifest"
   },
   "keywords": [],
   "author": "",
